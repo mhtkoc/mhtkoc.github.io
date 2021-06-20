@@ -2,7 +2,7 @@
 layout: post
 title:  <a href="https://muhammetkoc.medium.com/yazilim-projesi%CC%87nde-t%C3%BCrk%C3%A7e-karakter-kullan-ma-mak-c-102694ea81dc" target="_blank" rel="noopener noreferrer">YAZILIM PROJESİNDE TÜRKÇE KULLAN(ma)MAK (C++)  </a>
 date:   20-06-2021 23:20:23 +0300
-image:  /assets/images/blog/post-5.jpg
+image:  /assets/images/blog/post-1.png
 author: Muhammet Koç
 tags:   Türkçe karakter sorunu
 ---
