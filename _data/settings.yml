@@ -1,11 +1,11 @@
 #-------------------------------
 # General Site Settings
 
-title: mhmmtkc
+title: Muhammet Koç
 logo: 
 author: Muhammet Koç
 description: Kişisel web sitesi
-email: [muhammetkoc@tutamail.com](muhammetkoc@tutamail.com)
+email: [muhammetkoc@tutamail.com](mailto:muhammetkoc@tutamail.com)
 phone: only mail
 address: İzmir / Türkiye
 copyright: Copyright &copy; 2020 Redesigned by [mhmmtkc]() & Developed by [Getjekyllthemes](https://getjekyllthemes.com)
@@ -38,12 +38,12 @@ disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
 # Hero Section
 
 hero:
-  hero-title: Merhaba! Ben <br> Muhammet <br> OOP Developer
+  hero-title: Bir şeye ait her şeyi öğrenin, <br> her şeye dair bir şeyler bilin. <br> -H. Van Dyke
 
 social:
 #- {icon: "ti-facebook", link: "#"}
-#- {icon: "ti-instagram", link: "#"}
-#- {icon: "ti-dribbble", link: "#"}
+- {icon: "ti-twitter", link: "https://twitter.com/mhmmtkc_"}
+- {icon: "ti-twitter", link: "https://twitter.com/mhmmtkc_"}
 - {icon: "ti-twitter", link: "https://twitter.com/mhmmtkc_"}
 
 
@@ -91,7 +91,7 @@ skills:
 
 experience-title: Experience
 experience:
-#- {name: Junior UX Designer, icon: 'icon-1.png', date: 'Jan 2007 - Feb 2009', organization: 'WEBEX'}
+- {name: Junior UX Designer, icon: 'icon-1.png', date: 'Jan 2007 - Feb 2009', organization: 'WEBEX'}
 
 
 #-------------------------------
@@ -155,19 +155,7 @@ portfolio-items:
     portfolio-type:
       - type: "illustration"
       
- 
-#-------------------------------
-# Quotes
-
-testimonial-items:
-  - name: "H. Van Dyke"
-    image: "assets/images/testimonial/client-1.png"
-    designation : "Yazar"
-    content : "Bir şeye ait her şeyi öğrenin, her şeye dair bir şeyler bilin"
-    
-
-    
-
+      
 #-------------------------------
 # Contact Section
 
