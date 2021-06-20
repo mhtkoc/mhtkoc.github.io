@@ -62,32 +62,17 @@ blurb-btn-name: Daha fazla
 
 # Work Process Section
 work-process:
-  - title : "Research and Plan"
+  - title : "Araştırma ve planlama"
     icon : "assets/images/icons/plan.png"
-    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    content : "Başlamadan önce iş sürecinde gerekli biligileri araştırmak iş planını kolaylaştırır ve bir hatayla karşılaştığımda çözüm bulmayı kolaylaştırır."
     
-  - title : "Design and Develop"
+  - title : "Dizayn ve Geliştirme"
     icon : "assets/images/icons/design.png"
-    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    content : "Planımız hazırsa artık projemize hayat vermeye başlarız. Özenle en iyi şekilde sonuçlandırmaya çalışırız."
     
-  - title : "Deliver"
+  - title : "Teslimat ve Kullanım"
     icon : "assets/images/icons/print.png"
-    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-
-
-# My Team Section
-#team:
- # - title : "Jack Schenziwe"
- #   image : "assets/images/team/member-1.png"
- #   designation : "Project Manager"
- #   
- # - title : "Julias Carlie"
- #   image : "assets/images/team/member-2.png"
- #   designation : "Web Developer"
- #   
- # - title : "John Doe"
- #   image : "assets/images/team/member-3.png"
- #   designation : "Designer"
+    content : "Kullanıma hazır hale geldiğinde amacına uygun çalıştırlır."
 
 
 #-------------------------------
@@ -107,8 +92,6 @@ skills:
 experience-title: Experience
 experience:
 #- {name: Junior UX Designer, icon: 'icon-1.png', date: 'Jan 2007 - Feb 2009', organization: 'WEBEX'}
-#- {name: UX & UI Designer, icon: 'icon-2.png', date: 'Mar 2009 - Aug 2014', organization: 'AUGMEDIX'}
-#- {name: Senior UI Designer, icon: 'icon-3.png', date: 'Sep 2014 - Present', organization: 'THEMEFISHER'}
 
 
 #-------------------------------
@@ -118,33 +101,6 @@ education-title: Eğitim
 education:
 - {name: Elektronik Mühendisliği, date: '2024', organization: 'Gebze Teknik Üniversitesi'}
 - {name: Lise, date: '2019', organization: 'Ödemiş Ticaret Odası Anadolu Lisesi'}
-
-
-#-------------------------------
-# Services Section
-
-#services-title: Services
-#services:
-#- {
-#    name: UI Design,
-#    icon: ti-palette,
-#    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-#    active: # Add true to select section
-#  }
-#- {
-#    name: UX Design,
-#    icon: ti-vector,
-#    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-#    active: true # Add true to select section
-#  }
-#- {
-#    name: Interaction Design,
-#    icon: ti-panel,
-#    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-#    active: # Add true to select section
-#  }
-
-
 
 #-------------------------------
 # Portfolio (Section and Page)
@@ -170,16 +126,16 @@ portfolio-home-items:
 # Portfolio Page
 portfolio-label:
 - {
-    title : "C++",
+    title : "C++ programmning",
     type : "Consol"
   }
 - {
-    title : "BRANDING",
-    type : "branding"
+    title : "C programming",
+    type : "Consol"
   }
 - {
-    title : "ILLUSTRATION",
-    type : "illustration"
+    title : "Python programming",
+    type : "Consol"
   }
 
 portfolio-items:
@@ -199,40 +155,7 @@ portfolio-items:
     portfolio-type:
       - type: "illustration"
       
-  - image : "assets/images/portfolio/item-6.png"
-    url: "#"
-    portfolio-type:
-      - type: "design"
-      - type: "branding"
-      
-  - image : "assets/images/portfolio/item-8.png"
-    url: "#"
-    portfolio-type:
-      - type: "illustration"
-      
-  - image : "assets/images/portfolio/item-5.png"
-    url: "#"
-    portfolio-type:
-      - type: "design"
-      
-  - image : "assets/images/portfolio/item-1.png"
-    url: "#"
-    portfolio-type:
-      - type: "branding"
-      
-  - image : "assets/images/portfolio/item-3.png"
-    url: "#"
-    portfolio-type:
-      - type: "design"
-      - type: "illustration"
-      - type: "branding"
-      
-  - image : "assets/images/portfolio/item-7.png"
-    url: "#"
-    portfolio-type:
-      - type: "illustration"
-
-
+ 
 #-------------------------------
 # Quotes
 
@@ -243,27 +166,6 @@ testimonial-items:
     content : "Bir şeye ait her şeyi öğrenin, her şeye dair bir şeyler bilin"
     
 
-#-------------------------------
-# Client Slider Section
-
-client-slider-items:
-  - logo: "assets/images/clients-logo/client-logo-1.png"
-    url: "#"
-    
-  - logo: "assets/images/clients-logo/client-logo-1.png"
-    url: "#"
-    
-  - logo: "assets/images/clients-logo/client-logo-1.png"
-    url: "#"
-    
-  - logo: "assets/images/clients-logo/client-logo-1.png"
-    url: "#"
-    
-  - logo: "assets/images/clients-logo/client-logo-1.png"
-    url: "#"
-    
-  - logo: "assets/images/clients-logo/client-logo-1.png"
-    url: "#"
     
 
 #-------------------------------
