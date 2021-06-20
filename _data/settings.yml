@@ -38,7 +38,7 @@ disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
 # Hero Section
 
 hero:
-  hero-title: Bir şeye ait her şeyi öğrenin, <br> her şeye dair bir şeyler bilin. <br> -H. Van Dyke
+  hero-title: Bir şeye ait her şeyi öğrenin, <br> her şeye dair bir şeyler bilin. <br> <font size="5">-H. Van Dyke</font>
 
 social:
 #- {icon: "ti-facebook", link: "#"}
@@ -52,7 +52,7 @@ social:
 
 # About Section
 blurb:
-  Gebze Teknik Üniversitesi elektronik mühendisliği öğrencisiyim. Yazılım ve kodlamaya ilgim var. Kod yazmak, algoritma oluşturmak beni mutlu ediyor. 
+  Gebze Teknik Üniversitesi elektronik mühendisliği öğrencisiyim. Yazılım ile uğraşmayı ve kodlamayı seviyorum. Kod yazmak, algoritma oluşturmak beni mutlu ediyor. 
 
 blurb-btn-link: '/about'
 blurb-btn-name: Daha fazla
@@ -64,7 +64,7 @@ blurb-btn-name: Daha fazla
 work-process:
   - title : "Araştırma ve planlama"
     icon : "assets/images/icons/plan.png"
-    content : "Başlamadan önce iş sürecinde gerekli biligileri araştırmak iş planını kolaylaştırır ve bir hatayla karşılaştığımda çözüm bulmayı kolaylaştırır."
+    content : "Başlamadan önce iş sürecinde gerekli bilgileri araştırmak iş planını kolaylaştırır ve bir hatayla karşılaşıldığında çözüm bulmayı kolaylaştırır."
     
   - title : "Dizayn ve Geliştirme"
     icon : "assets/images/icons/design.png"
@@ -72,7 +72,7 @@ work-process:
     
   - title : "Teslimat ve Kullanım"
     icon : "assets/images/icons/print.png"
-    content : "Kullanıma hazır hale geldiğinde amacına uygun çalıştırlır."
+    content : "Kullanıma hazır hale geldiğinde amacına uygun şekilde kullanıma sunulur."
 
 
 #-------------------------------
@@ -89,9 +89,9 @@ skills:
 #-------------------------------
 # Exprerience Section
 
-experience-title: Experience
+experience-title: Deneyim
 experience:
-- {name: Junior UX Designer, icon: 'icon-1.png', date: 'Jan 2007 - Feb 2009', organization: 'WEBEX'}
+- {name: Junior Devoloper, icon: 'icon-1.png', date: '2020-2021', organization: 'Uzaktan eğitim boyunca kendi evimde kendi kendime'}
 
 
 #-------------------------------
@@ -115,12 +115,6 @@ portfolio-home-items:
     
   - image : "assets/images/portfolio/item-3.png"
     url: "#"
-    
-  - image : "assets/images/portfolio/item-4.png"
-    url: "#"
-    
-  - image : "assets/images/portfolio/item-5.png"
-    url: "#"
 
 
 # Portfolio Page
@@ -142,18 +136,18 @@ portfolio-items:
   - image : "assets/images/portfolio/item-1.png"
     url: "#"
     portfolio-type:
-     - type: "design"
-     - type: "illustration"
+     - type: "consol"
+#     - type: "illustration"
       
   - image : "assets/images/portfolio/item-2.png"
-    url: "#"
+    url: "https://github.com/mhmmtkc/CalorieTracker"
     portfolio-type:
-      - type: "branding"
+      - type: "consol"
       
   - image : "assets/images/portfolio/item-3.png"
     url: "#"
     portfolio-type:
-      - type: "illustration"
+      - type: "consol"
       
       
 #-------------------------------
