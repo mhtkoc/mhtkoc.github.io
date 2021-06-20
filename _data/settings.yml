@@ -38,7 +38,7 @@ disqus-identifier: # Add your shortname for Disqus Comment. For example mr-brown
 # Hero Section
 
 hero:
-  hero-title: Bir şeye ait her şeyi öğrenin, <br> her şeye dair bir şeyler bilin. <br> <font size="5">-H. Van Dyke</font>
+  hero-title: Bir şeye ait her şeyi öğrenin, <br> her şeye dair bir şeyler bilin. <br> <font size="8">-H. Van Dyke</font>
 
 social:
 #- {icon: "ti-facebook", link: "#"}
