@@ -5,10 +5,10 @@ title: Muhammet Koc
 logo: 
 author: Muhammet Koc
 description: Kişisel web sitesi
-email: [muhammetkoc@tutamail.com](mailto: muhammetkoc@tutamail.com)
+email: muhammetkoc@tutamail.com
 phone: only mail
 address: İzmir / Türkiye
-copyright: Copyright &copy; 2020 Redesigned by [mhmmtkc]() & Developed by [Getjekyllthemes](https://getjekyllthemes.com)
+copyright: Copyright &copy; 2020 Redesigned by [mhmmtkc](https://mhmmtkc.github.io) & Developed by [Getjekyllthemes](https://getjekyllthemes.com)
 
 menu:
 - {name: Hakkımda, link: '/about'}
