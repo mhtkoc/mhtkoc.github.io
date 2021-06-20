@@ -26,8 +26,8 @@ layout: default
     <div class="row">
       <div class="col-lg-12">
         <h3 class="font-tertiary mb-5">{{ page.title | escape }}</h3>
-        <p class="font-secondary"> {{ page.date | date: '%m/ %d/ %Y' }} tarihinde <span class="text-primary">{{
-            page.author }}</span class="text-primary"> tarafından yayınlandı. # {% for tag in page.tags %}<span>{{ tag
+        <p class="font-secondary"> <span class="text-primary">{{page.author }}</span class="text-primary"> tarafından
+          {{ page.date | date: '%d/ %m/ %Y' }} tarihinde yayınlandı. # {% for tag in page.tags %}<span>{{ tag
             }} </span>{% endfor %}</p>
         <div class="content">
           <img src="{{page.image | relative_url }}" class="img-fluid rounded float-left mr-5 mb-4" alt="{{page.title}}">
