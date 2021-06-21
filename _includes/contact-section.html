@@ -2,34 +2,16 @@
 <section class="section section-on-footer" data-background="{{site.baseurl}}/assets/images/backgrounds/bg-dots.png">
   <div class="container">
     <div class="row">
-      <div class="col-12 text-center">
-        <h2 class="section-title">{{ site.data.settings.contact-title }}</h2>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLScKcq8leh1b8wMBRby7cInlVot5ngBSsBZqrVaSiPbqijAI5g/viewform?embedded=true"
+        width="640" height="641" frameborder="0" marginheight="0" marginwidth="0">Yükleniyor…</iframe>
+      <div class="col-lg-6 col-10 mx-auto">
+        <button type="submit" class="btn btn-primary w-100">gönder</button>
       </div>
-      <div class="col-lg-8 mx-auto">
-        <div class="bg-white rounded text-center p-5 shadow-down">
-          <h4 class="mb-80">İletişim Formu</h4>
-          <form action="https://formspree.io/{{ site.data.settings.contact-email }}" method="POST" class="row">
-            <div class="col-md-6">
-              <input type="text" id="name" name="name" placeholder="Ad soyad" class="form-control px-0 mb-4">
-            </div>
-            <div class="col-md-6">
-              <input type="email" id="email" name="_replyto" placeholder="Email Adresiniz"
-                class="form-control px-0 mb-4">
-            </div>
-            <div class="col-12">
-              <textarea name="message" id="message" class="form-control px-0 mb-4"
-                placeholder="Not ekleme bölümü"></textarea>
-            </div>
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLScKcq8leh1b8wMBRby7cInlVot5ngBSsBZqrVaSiPbqijAI5g/viewform?embedded=true"
-              width="640" height="641" frameborder="0" marginheight="0" marginwidth="0">Yükleniyor…</iframe>
-            <div class="col-lg-6 col-10 mx-auto">
-              <button type="submit" class="btn btn-primary w-100">gönder</button>
-            </div>
-          </form>
-        </div>
-      </div>
+      </form>
     </div>
+  </div>
+  </div>
   </div>
 </section>
 <!-- /contact -->
