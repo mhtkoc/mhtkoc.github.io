@@ -116,7 +116,7 @@ portfolio-home-items:
     url: "#"
 
 
-# Portfolio Page
+# Project Page
 portfolio-label:
 - {
     title : "C++ programmning",
@@ -133,6 +133,7 @@ portfolio-label:
 
 portfolio-items:
   - image : "assets/images/portfolio/item-1.png"
+    title : "Atanmadı"
     url: "#"
     portfolio-type:
      - type: "consol"
@@ -140,11 +141,13 @@ portfolio-items:
       
   - image : "assets/images/portfolio/item-2.png"
     url: "https://github.com/mhmmtkc/CalorieTracker"
+    title : "Calorie tracker"
     portfolio-type:
       - type: "consol"
       
   - image : "assets/images/portfolio/item-3.png"
     url: "#"
+    title : "Atanmadı"
     portfolio-type:
       - type: "consol"
       
