@@ -14,7 +14,6 @@ menu:
 - {name: Hakkımda, link: '/about'}
 - {name: Blog, link: '/blog'}
 - {name: Projelerim, link: '/portfolio'}
-- {name: İletişim, link: '/contact'}
 
 
 #-------------------------------
@@ -153,5 +152,5 @@ portfolio-items:
 #-------------------------------
 # Contact Section
 
-contact-title: İletişim Bilgisi
-contact-email: muhammetkoc@tutamail.com
+#contact-title: İletişim Bilgisi
+#contact-email: muhammetkoc@tutamail.com
