@@ -1,17 +1,394 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="tr">
 
-{% include hero-section.html %}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="Muhammet KOÇ" />
+    <title>Muhammet KOÇ</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/sb_agencyTheme.css" rel="stylesheet" />
+</head>
 
-{% include about-section.html %}
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top"><img src="assets/img/logo.svg" alt="MuhammetKoc" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experiences">Deneyimler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Projeler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://muhammetkoc.medium.com/">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container">
+            <h1 class="text-uppercase shadow-purple">
+                Bir şeye ait her şeyi öğrenin, her şeye dair bir şeyler
+                bilin.
+            </h1>
+            <h5 class="shadow-purple">-H. Van Dyke</h5><br><br><br>
+            <a class="btn btn-primary btn-l text-uppercase bg-dark" href="#about">Daha Fazla</a>
+        </div>
+    </header>
+    <!-- About-->
+    <section class="page-section" id="about">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Hakkımda</h2><br>
+            </div>
+            <div>
+                <figure>
+                    <div class="col-lg-3 d-flex mx-auto"><img src="assets/img/about/author.jpg" alt="Muhammet koç"
+                            class="img-fluid">
+                    </div>
+                    <figcaption class="text-center">Muhammet Koç</figcaption>
+                </figure>
 
-{% include skills-section.html %}
+                <p>Gebze Teknik Üniversitesi elektronik mühendisliği
+                    öğrencisiyim. Yazılım ile uğraşmayı ve kodlamayı seviyorum. Kod
+                    yazmak, algoritma oluşturmak beni mutlu ediyor. Teknolojiyi takip etmeyi seviyorum. Zamanımın çoğunu
+                    bir ekranın önünde
+                    genellikle teknoloji temalı bilmediğim herhangi bilgiyi keşfederken harcıyorum. Dünden bugüne ve
+                    bugünden yarına birine
+                    ilham verme, yardımcı olma; fikirlere bir parça dokunabilmek vizyonuyla yaşıyorum.</p><br><br>
+            </div>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg"
+                            alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2015-2019</h4>
+                            <h4 class="subheading">Lise Eğitimi</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">Ödemiş Ticaret odası anadolu lisesi(İzmir)<br> İlk iki senenin
+                                ardından sayısal bölümü seçip 88.36 ortalama ile mezun oldum.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg"
+                            alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2019-Günümüz</h4>
+                            <h4 class="subheading">Üniversite Eğitimi</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">Gebze Teknik Üniveristesi(Kocaeli/Gebze)<br> Üniversite tercihlerim
+                                sonrası GTÜ'de elektronik mühendisliği bölümüne kayıt oldum ve öğrenimime halen devam
+                                ediyorum</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg"
+                            alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2021-Günümüz</h4>
+                            <h4 class="subheading">Sabit Kanat İha AR-GE'si</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">5 kişilik bir ekiple <a href="https://www.gturkiha.com">G-Türk
+                                    İha</a>'yı
+                                geliştirmeye başladık.Ben bu projede elektronik sistem sorumlusu olarak görev alıyorum.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg"
+                            alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>Şubat 2022</h4>
+                            <h4 class="subheading">ATİK'in kurulumu</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">Okulumuzda <a href="https://www.gtuatik.com">AR-GE Teknoloji ve
+                                    İnovasyon Kulübü</a>'nün kurulmasında
+                                öncülük etttim. Kulübün websitesi koordinatörlüğünü üstlenerek yönetim kurulunda görev
+                                aldım</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image">
+                        <h4>
+                            <br> Yükleniyor...
+                        </h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <hr>
+    <hr>
+    <!-- Experiences-->
+    <section class="page-section" id="experiences">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Deneyimler</h2>
+                <h3 class="section-subheading text-muted">...</h3>
+            </div>
 
-{% include experience-section.html %}
+            <div class="row text-center ">
+                <div class="col-md-4 mx-auto bg-info bg-opacity-25 p-3">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-plane fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Elektronik sistem sorumlusu</h4>
+                    <p class="text-muted">Teknofest sabit kanat iha kategorisi için ürettiğimiz ihanın elektronik
+                        sistemini kurdum.</p>
+                </div>
+                <div class="col-md-4 mx-auto bg-info bg-opacity-25 p-3">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Website Koordinatörlüğü</h4>
+                    <p class="text-muted">AR-GE Teknoloji ve İnovasyon Kulübünün web sitesini yaptım ve yönetiyorum.
+                    </p>
+                </div>
 
-{% include education-section.html %}
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Grid-->
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Projeler</h2>
+                <h3 class="section-subheading text-muted">...</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mx-auto">
+                    <!-- Portfolio item 1-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div style="height: 18rem;">
+                                <img class="img-fluid img-fit" src="assets/img/portfolio/linkedlist.png"
+                                    alt="Linked List" />
+                            </div>
 
-{% include portfolio-section.html %}
 
-{% include blog-section.html %}
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Calorie Tracker</div>
+                            <div class="portfolio-caption-subheading text-muted">C++ Linked list</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mx-auto">
+                    <!-- Portfolio item 2-->
+                    <div class="portfolio-item">
+
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <div style="height: 18rem;">
+                                <img src="assets/img/portfolio/webtasarım.png" class="img-fluid img-fit"
+                                    alt="Web Tasarım" />
+                            </div>
+
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Tasarlanan Websiteleri</div>
+                            <div class="portfolio-caption-subheading text-muted">html-css-js, python, node.js</div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients-->
+    <div class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 col-sm-6 my-3">
+                    <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg"
+                            alt="..." aria-label="Microsoft Logo" /></a>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3">
+                    <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg"
+                            alt="..." aria-label="Google Logo" /></a>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3">
+                    <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg"
+                            alt="..." aria-label="Facebook Logo" /></a>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3">
+                    <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg"
+                            alt="..." aria-label="IBM Logo" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">İletişim</h2>
+                <h3 class="section-subheading text-muted">...</h3>
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">Copyright &copy; mhmmtkc.github.io 2022</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="https://github.com/mhmmtkc" aria-label="Github"><i
+                            class="fab fa-github fa-2x"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/muhammet-koc/"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/mhmmtkc_" aria-label="Twitter"><i
+                            class="fab fa-twitter fa-2x"></i></a>
+
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="row">
+                        <h5>Email</h5>
+                        <a href="mailto:muhammetkoc874@gmail.com">muhammetkoc874@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Portfolio Modals-->
+    <!-- Portfolio item 1 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">Calorie Tracker </h2>
+                                <p class="item-intro text-muted">C++ Linked list</p>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/linkedlist.png"
+                                    alt="..." />
+                                <p>1 hafta boyunca girilen verilere göre kaç kalori alındığı bilgisini hesaplayan C++
+                                    diliyle Linked List kullanılarak yazılmış program</p>
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>Kaynak:</strong>
+                                        Github
+                                    </li>
+                                    <li>
+                                        <strong>Link:</strong>
+                                        <a
+                                            href="https://github.com/mhmmtkc/CalorieTracker">https://github.com/mhmmtkc/CalorieTracker</a>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio item 2 modal popup-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg"
+                        alt="Close modal" /></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="modal-body">
+                                <!-- Project details-->
+                                <h2 class="text-uppercase">Web Siteleri</h2>
+                                <p class="item-intro text-muted">...</p>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/webtasarım.png"
+                                    alt="..." />
+                                <p>Frontend için Html-css-Javascript, Backend için python,node.js kullanılan projeler
+                                </p>
+                                <ul class="list-inline">
+                                    <li>
+                                        <strong>Frontend</strong>
+                                        <a href="https://www.gturkiha.com">https://www.gturkiha.com</a>
+                                    </li>
+                                    <li>
+                                        <strong>Frontend</strong>
+                                        <a href="https://www.gtuatik.com">https://www.gtuatik.com</a>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                    type="button">
+                                    <i class="fas fa-xmark me-1"></i>
+                                    Close Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
