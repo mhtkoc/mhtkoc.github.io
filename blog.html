@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog | Muhammet Koç</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/theme.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/marked@16.4.1/lib/marked.umd.min.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main.container {
+            flex: 1;
+        }
+
+        .footer {
+            margin-top: auto;
+        }
+
+        .navbar {
+            background-color: #212529 !important;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html#page-top"><img src="assets/img/white.svg" alt="MuhammetKoc" />Ana
+                Sayfa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/index.html#about">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#experiences">Deneyimler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#portfolio">Projeler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#contact">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container py-5">
+        <h1 class="text-center mb-4">Blog Yazıları</h1>
+        <div id="posts-list"></div>
+        <div id="post-content" style="display:none;"></div>
+        <button id="back-btn" style="display:none;" class="btn btn-secondary mt-4">← Geri</button>
+    </main>
+    <footer class="footer py-4 bg-dark text-white text-center">
+        &copy; mhtkoc.github.io 2025
+    </footer>
+    <script>
+        let posts = [];
+
+        function listPosts() {
+            const listDiv = document.getElementById('posts-list');
+            listDiv.innerHTML = '';
+            posts.forEach((post, idx) => {
+                const card = document.createElement('div');
+                card.className = 'card mb-3';
+                card.innerHTML = `<div class="card-body">
+                    <h3 class="card-title">${post.title}</h3>
+                    <h6 class="card-subtitle mb-2 text-muted">${post.date}</h6>
+                    <p class="card-text">${post.description}</p>
+                    <button class="btn btn-primary" onclick="showPost(${idx})">Yazıyı Oku</button>
+                </div>`;
+                listDiv.appendChild(card);
+            });
+            document.getElementById('post-content').style.display = 'none';
+            document.getElementById('back-btn').style.display = 'none';
+            listDiv.style.display = 'block';
+        }
+
+        function showPost(idx) {
+            const post = posts[idx];
+            fetch(post.file)
+                .then(res => res.text())
+                .then(md => {
+                    // Front matter'ı ayıkla
+                    const fmMatch = md.match(/^---([\s\S]*?)---/);
+                    let content = md;
+                    if (fmMatch) {
+                        content = md.slice(fmMatch[0].length);
+                    }
+                    document.getElementById('post-content').innerHTML = marked.parse(content);
+                    document.getElementById('posts-list').style.display = 'none';
+                    document.getElementById('post-content').style.display = 'block';
+                    document.getElementById('back-btn').style.display = 'inline-block';
+                });
+        }
+
+        document.getElementById('back-btn').onclick = listPosts;
+
+        // posts.json'dan blog yazılarını yükle
+        fetch('posts/posts.json')
+            .then(res => res.json())
+            .then(data => {
+                posts = data;
+                listPosts();
+            });
+    </script>
+</body>
+
+</html>
