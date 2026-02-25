@@ -1,5 +1,11 @@
 [
   {
+    "file": "posts/2026-02-25-c-bitwise-operators.md",
+    "title": "C Dilinde Bitwise (Bit Düzeyinde) Operatörler",
+    "date": "2026-02-25",
+    "description": "C programlama dilindeki bitwise operatörleri örneklerle açıklıyoruz."
+  },
+  {
     "file": "posts/2025-10-17-ilk-yazi.md",
     "title": "İlk Blog Yazım",
     "date": "2025-10-17",
