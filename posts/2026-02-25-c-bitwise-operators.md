@@ -4,19 +4,18 @@ date: 2026-02-25
 description: C programlama dilindeki bitwise operatörleri örneklerle açıklıyoruz.
 ---
 
-# C Dilinde Bitwise (Bit Düzeyinde) Operatörler
 
 Bitwise operatörler, sayıların ikili (binary) gösterimleri üzerinde doğrudan işlem yapar. C dilinde performans gerektiren düşük seviyeli programlama, donanım kontrolü ve veri manipülasyonunda yaygın olarak kullanılırlar.
 
 ## Bitwise Operatörler Listesi
 
 | Operatör | Adı | Açıklama |
-|----------|-----|----------|
-| `&`  | AND | Her iki bit de 1 ise sonuç 1 |
-| `\|` | OR  | Bitlerden en az biri 1 ise sonuç 1 |
-| `^`  | XOR | Bitler farklıysa sonuç 1 |
-| `~`  | NOT | Bitleri tersine çevirir (tümleyen) |
-| `<<` | Left Shift  | Bitleri sola kaydırır |
+| ---------- | ----- | ---------- |
+| `&` | AND | Her iki bit de 1 ise sonuç 1 |
+| `\|` | OR | Bitlerden en az biri 1 ise sonuç 1 |
+| `^` | XOR | Bitler farklıysa sonuç 1 |
+| `~` | NOT | Bitleri tersine çevirir (tümleyen) |
+| `<<` | Left Shift | Bitleri sola kaydırır |
 | `>>` | Right Shift | Bitleri sağa kaydırır |
 
 ---
@@ -196,6 +195,7 @@ int main() {
 ```
 
 **Çıktı:**
+
 ```
 Okuma izni var
 Yazma izni yok
