@@ -229,9 +229,12 @@ body {
     font-size: 1.35rem;
 }
 
-#post-content p {
+#post-content p,
+.post-body p {
     margin-bottom: 1.25rem;
     color: var(--blog-text);
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 #post-content ul,
