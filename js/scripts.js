@@ -1,6 +1,46 @@
 
 
+// Theme Management (Light / Dark Mode)
+function getPreferredTheme() {
+    const stored = localStorage.getItem('theme');
+    if (stored) return stored;
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function updateThemeToggleBtn(theme) {
+    const btn = document.getElementById('theme-toggle-btn');
+    if (!btn) return;
+    if (theme === 'dark') {
+        btn.innerHTML = '<i class="fa-solid fa-sun text-warning"></i>';
+        btn.setAttribute('title', 'Açık Temaya Geç');
+        btn.setAttribute('aria-label', 'Açık Temaya Geç');
+    } else {
+        btn.innerHTML = '<i class="fa-solid fa-moon text-warning"></i>';
+        btn.setAttribute('title', 'Koyu Temaya Geç');
+        btn.setAttribute('aria-label', 'Koyu Temaya Geç');
+    }
+}
+
+function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    updateThemeToggleBtn(theme);
+}
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || getPreferredTheme();
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    applyTheme(newTheme);
+}
+
+window.toggleTheme = toggleTheme;
+window.applyTheme = applyTheme;
+
 window.addEventListener('DOMContentLoaded', event => {
+
+    // Initialize theme button icon
+    const initialTheme = document.documentElement.getAttribute('data-theme') || getPreferredTheme();
+    updateThemeToggleBtn(initialTheme);
 
     // Navbar shrink function
     var navbarShrink = function () {

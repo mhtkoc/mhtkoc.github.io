@@ -18,366 +18,650 @@
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Montserrat:wght@400;600;700&family=Roboto+Slab:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/theme.css" rel="stylesheet" />
 
 
+    <!-- Anti-flicker Theme Initialization -->
+    <script>
+        (function () {
+            const stored = localStorage.getItem('theme');
+            const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = stored || (systemDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="#page-top"><img src="assets/img/white.svg" alt="MuhammetKoc" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars ms-1"></i>
-            </button>
+            <div class="d-flex align-items-center gap-2 order-lg-last">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle-btn" class="theme-toggle-btn ms-2" onclick="toggleTheme()"
+                    title="Temayı Değiştir" aria-label="Temayı Değiştir">
+                    <i class="fa-solid fa-moon text-warning"></i>
+                </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#about">Hakkımda</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experiences">Deneyimler</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Projeler</a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link"
-                            href="https://mhtkoc.github.io/mdbook-test/">mdbook-test</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- Masthead-->
+    <!-- Masthead / Hero -->
     <header class="masthead">
         <div class="container">
-            <h1 class="text-uppercase shadow-red">
-                Bir şeye ait her şeyi öğrenin, her şeye dair bir şeyler
-                bilin.
+            <div class="hero-badge mb-4">
+                <i class="fas fa-microchip me-2"></i> Elektronik &amp; Gömülü Sistemler Mühendisi
+            </div>
+            <h1 class="hero-quote text-uppercase mb-3">
+                Geleceği tahmin etmenin en iyi yolu, onu icat etmektir.
             </h1>
-            <h5 class="shadow-red">H. Van Dyke</h5><br><br><br>
-            <a class="btn btn-primary btn-l text-uppercase bg-dark" href="#about">Daha Fazla</a>
+            <p class="hero-author mb-4 text-center ">— Alan Kay</p>
+            <p class="hero-desc mx-auto mb-5">
+                STM32, ROS2, Otonom Mobil Robotlar ve Düşük Seviyeli C/C++ Mimarileri üzerine odaklanan donanım ve
+                yazılım geliştirici.
+            </p>
+            <div class="hero-buttons mb-4">
+                <a class="btn btn-primary btn-xl text-uppercase bg-warning text-dark fw-bold border-0 shadow"
+                    href="#portfolio">
+                    <i class="fas fa-laptop-code me-2"></i>Projelerim
+                </a>
+                <a class="btn btn-outline-custom btn-xl text-uppercase fw-bold" href="#about">
+                    <i class="fas fa-user me-2"></i>Hakkımda
+                </a>
+                <a class="btn btn-outline-warning btn-xl text-uppercase fw-bold" href="blog.html">
+                    <i class="fas fa-book-open me-2"></i>Blog
+                </a>
+            </div>
+            <div class="hero-tech-pills">
+                <span class="hero-pill"><i class="fas fa-code me-1 text-warning"></i> C / C++</span>
+                <span class="hero-pill"><i class="fas fa-microchip me-1 text-warning"></i> STM32 &amp; ARM</span>
+                <span class="hero-pill"><i class="fas fa-robot me-1 text-warning"></i> ROS2 Jazzy</span>
+                <span class="hero-pill"><i class="fas fa-layer-group me-1 text-warning"></i> FreeRTOS</span>
+                <span class="hero-pill"><i class="fas fa-project-diagram me-1 text-warning"></i> KiCad</span>
+                <span class="hero-pill"><i class="fab fa-linux me-1 text-warning"></i> Linux</span>
+            </div>
         </div>
     </header>
-    <!-- About-->
+
+    <!-- About Section -->
     <section class="page-section" id="about">
         <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Hakkımda</h2><br>
+            <div class="text-center mb-5">
+                <h2 class="section-heading text-uppercase">Hakkımda</h2>
+                <p class="text-muted fs-5">Mühendislik vizyonum, yetkinliklerim ve eğitim geçmişim</p>
             </div>
-            <div>
-                <figure>
-                    <div class="col-lg-3 d-flex mx-auto"><img src="assets/img/about/photo.webp" alt="Muhammet koç"
-                            class="img-fluid">
+
+            <div class="row g-4 align-items-center mb-5">
+                <div class="col-lg-4 text-center">
+                    <div class="about-profile-card">
+                        <div class="about-photo-wrapper">
+                            <img src="assets/img/about/photo.webp" alt="Muhammet Koç" class="img-fluid" />
+                        </div>
+                        <h3 class="h4 fw-bold mb-1">Muhammet Koç</h3>
+                        <p class="text-warning fw-bold small text-uppercase mb-3">Elektronik &amp; Gömülü Sistemler
+                            Mühendisi</p>
+                        <div class="text-muted small mb-3">
+                            <div><i class="fas fa-graduation-cap text-warning me-2"></i>Gebze Teknik Üniversitesi</div>
+                            <div><i class="fas fa-map-marker-alt text-warning me-2"></i>Kocaeli / İstanbul, Türkiye
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center gap-2 mt-3">
+                            <a href="https://github.com/mhtkoc" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-dark btn-sm rounded-circle"
+                                style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"
+                                title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/muhammet-koc/" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-primary btn-sm rounded-circle"
+                                style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"
+                                title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:muhammetkoc874@gmail.com"
+                                class="btn btn-warning text-dark btn-sm rounded-circle"
+                                style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;"
+                                title="E-posta"><i class="fas fa-envelope"></i></a>
+                        </div>
                     </div>
-                    <figcaption class="text-center">Muhammet Koç</figcaption>
-                </figure>
-
-                <p>Yazılım geliştirme, gömülü sistemler ve otonom teknolojilere ilgi duyan tutkulu bir mühendisim.
-                    Üniversite yıllarımda C
-                    ve C++ ile programlamaya başladım, ardından Python ve Flask ile web geliştirme alanına yöneldim.
-                    Kendi portfolyo sitemin
-                    yanı sıra İHA takımımız ve öğrenci kulübümüz için de web siteleri geliştirdim.
-
-                    İHA takımında elektronik sistemlerden sorumlu olarak gömülü donanım üzerinde pratik deneyim
-                    kazandım. Son dönemde,
-                    Raspberry Pi 5 üzerinde ROS2 Jazzy kullanarak Lidar ve kamera gibi sensörleri entegre ettiğim otonom
-                    mobil robot
-                    projeleri geliştiriyorum.
-
-                    Siber güvenlik, makine öğrenmesi ve sinyal işleme konularında temel bilgiye sahibim. Dijital ve
-                    analog haberleşme
-                    sistemleri üzerine akademik çalışmalar yaptım. Robotik, yapay zeka ve gömülü yazılım alanlarında
-                    kendimi geliştirerek
-                    anlamlı mühendislik projelerine katkı sağlamayı hedefliyorum.</p><br><br>
+                </div>
+                <div class="col-lg-8">
+                    <div class="ps-lg-3">
+                        <h3 class="h4 fw-bold mb-3 text-dark">Donanım ve Yazılımın Kesişiminde Mühendislik</h3>
+                        <p class="text-secondary"
+                            style="line-height: 1.8; text-align: justify; text-justify: inter-word;">
+                            Elektronik ve gömülü sistemler, gerçek zamanlı yazılım mimarileri ve otonom teknolojilere
+                            odaklanan bir elektronik mühendisiyim. C ve C++ dilleriyle donanım seviyesinde deterministik
+                            kontrol, STM32 ve ARM tabanlı mikrodenetleyiciler üzerinde sürücü geliştirme ve ROS2 ile
+                            otonom mobil robotik sistemler üzerine yoğunlaşmaktayım.
+                        </p>
+                        <p class="text-secondary"
+                            style="line-height: 1.8; text-align: justify; text-justify: inter-word;">
+                            Depo araçlarının otonomlaştırılması, endüstriyel PCB tasarımı (KiCad), UART/I2C/SPI
+                            haberleşme protokolleri, sensör füzyonu (LiDAR &amp; Kamera) ve makine öğrenmesi destekli
+                            görüntü işleme alanlarında uygulamalı Ar-Ge tecrübesine sahibim. Donanımın fiziksel
+                            sınırlarıyla yazılımın dinamizmini birleştiren yenilikçi mühendislik çözümleri üretmeyi
+                            hedefliyorum.
+                        </p>
+                        <div class="mt-4">
+                            <h5 class="small fw-bold text-uppercase text-muted mb-2">Temel İlgi &amp; Çalışma Alanları
+                            </h5>
+                            <div class="d-flex flex-wrap">
+                                <span class="about-interest-badge"><i class="fas fa-microchip"></i> Gömülü Sistemler
+                                    (STM32 / ARM)</span>
+                                <span class="about-interest-badge"><i class="fas fa-robot"></i> Otonom Mobil Robotlar
+                                    (ROS2)</span>
+                                <span class="about-interest-badge"><i class="fas fa-code"></i> Düşük Seviyeli C / C++
+                                    Mimarisi</span>
+                                <span class="about-interest-badge"><i class="fas fa-layer-group"></i> RTOS &amp; Gerçek
+                                    Zamanlı Sistemler</span>
+                                <span class="about-interest-badge"><i class="fas fa-project-diagram"></i> Şematik &amp;
+                                    PCB Tasarımı (KiCad)</span>
+                                <span class="about-interest-badge"><i class="fas fa-satellite-dish"></i> Sensör
+                                    Entegrasyonu &amp; Telemetri</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Eğitim ve Kilometre Taşları -->
+            <div class="text-center mt-5 mb-5">
+                <h3 class="h4 fw-bold text-uppercase">Eğitim &amp; Mühendislik Yolculuğu</h3>
+                <p class="text-muted">Akademik gelişimim ve teknik temellerim</p>
+            </div>
+
             <ul class="timeline">
                 <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg"
-                            alt="..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4>2015-2019</h4>
-                            <h4 class="subheading">Lise Eğitimi</h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">Ödemiş Ticaret odası anadolu lisesi(İzmir)<br> İlk iki senenin
-                                ardından sayısal bölümü seçip 88.36/100 ortalama ile mezun oldum.</p>
-                        </div>
+                    <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="Üniversite Eğitimi" />
                     </div>
-                </li>
-                <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg"
-                            alt="..." /></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h4>2019-2025</h4>
-                            <h4 class="subheading">Üniversite Eğitimi</h4>
+                            <h4>2019 - 2025</h4>
+                            <h4 class="subheading text-warning">Gebze Teknik Üniversitesi</h4>
                         </div>
                         <div class="timeline-body">
-                            <p class="text-muted">Gebze Teknik Üniversitesi (Gebze/Kocaeli)<br>Elektronik Mühendisliği
-                                bölümünden 2.81/4.00 GNO ile mezun oldum.
-                                Bu süreçte, gömülü sistemler ve otonom teknolojiler üzerine projelerde yer aldım.</p>
-                            <br>
-                            <p class="text-muted">5 kişilik bir ekiple <a
-                                    href="https://mhtkoc.github.io/gturkiha">G-Türk
-                                    İha</a>'yı
-                                geliştirdik. Takım içerisinde elektronik sistem sorumlusu olarak görev aldım.
-                            </p> <br>
-                            <p class="text-muted">Okulumuzda <a href="https://mhtkoc.github.io/atik">AR-GE Teknoloji ve
-                                    İnovasyon Kulübü</a>'nün kurulmasında
-                                öncülük etttim. Kulübün websitesi koordinatörlüğünü üstlenerek yönetim kurulunda görev
-                                aldım</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg"
-                            alt="..." /></div>
-                    <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h4>2024-2025</h4>
-                            <h4 class="subheading"><a href="https://www.hergele.co">Hergele Mobility</a></h4>
-                        </div>
-                        <div class="timeline-body">
-                            <p class="text-muted">-Yük çekmek ve taşımak için kullanılan elektrikli araçlar için
-                                elektronik sistemlerin uçtan uca tasarımını
-                                gerçekleştirdim.
-                                Bu tasarlanan sistemlerin donanım ve yazılım gereksinimlerinin belirlenmesi, prototip
-                                oluşturma ve üretim süreçlerine
-                                aktif olarak katıldım.
-                                <br>-Yazılım sisteminde, donanım birimleri arasındaki iletişim için UART, I2C ve SPI
-                                protokollerini, özellikle UART'ı
-                                kullanarak uygulamalar geliştirdim.
-                                <br>-Araç kontrolü, STM32 mikrodenetleyici tabanlı kartlar tarafından sağlanmıştır.
-                                Dijital iletişim gereksinimlerine göre,
-                                biri Bluetooth iletişimi içeren iki farklı donanım tasarımı yapılmıştır. Bu donanım
-                                tasarımları üretilmiş olup, şu anda
-                                aktif araçlarda kullanılmaktadır.
-                                <br>-Araç ekranları için LED ve OLED tabanlı kullanıcı arayüzleri tasarladım ve
-                                geliştirdim.
-                                <br>-Yük taşıyan bir depo aracının otonom dönüşümü için bir projeye liderlik ettim. Tüm
-                                elektronik donanım ve yazılım sistemi geliştirmeleri tarafımdan bağımsız olarak
-                                yürütüldü ve
-                                prototip tamamlandı.
+                            <p class="text-muted">
+                                <strong>Elektronik Mühendisliği Lisans Derecesi</strong><br>
+                                Gömülü sistemler, sayısal sinyal işleme, analog ve dijital haberleşme teorisi üzerine
+                                yoğunlaştım. Lisans sürecinde otonom mobil robotlar, sensör füzyonu ve mikrodenetleyici
+                                mimarileri üzerine araştırmalar yürüttüm.
                             </p>
                         </div>
                     </div>
                 </li>
                 <li class="timeline-inverted">
-                    <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg"
-                            alt="..." /></div>
+                    <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="assets/img/about/3.jpg"
+                            alt="Teknik Takımlar & Kulüp" />
+                    </div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
-                            <h4>Ekim 2025</h4>
-                            <h4 class="subheading">İdealab R&D</h4>
+                            <h4>2021 - 2024</h4>
+                            <h4 class="subheading text-warning">Mühendislik Takımları &amp; Liderlik</h4>
                         </div>
                         <div class="timeline-body">
-                            <p class="text-muted">Kariyerime <a href="https://www.idealab.com.tr">İdealab R&D</a>'de
-                                elektronik mühendisi olarak devam ediyorum.</p>
+                            <p class="text-muted">
+                                <strong>G-Türk İHA &amp; ATİK Kulübü Kurucu Yönetimi</strong><br>
+                                İHA telemetri ve güç elektroniği sorumluluğunu üstlenerek yarışma süreçlerine katıldım.
+                                Üniversitede teknoloji ve inovasyon kulübünün kuruluşuna öncülük ederek teknik
+                                etkinlikler ve seminerler koordine ettim.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-image">
+                        <img class="rounded-circle img-fluid" src="assets/img/about/4.jpg"
+                            alt="Ar-Ge ve Profesyonel Gelişim" />
+                    </div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4>2024 - Günümüz</h4>
+                            <h4 class="subheading text-warning">Sürekli Araştırma &amp; Teknik Üretim</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">
+                                <strong>Gömülü Yazılım, RTOS &amp; Otonom Teknolojiler</strong><br>
+                                Endüstriyel elektrikli araç kontrol kartları, ROS2 tabanlı navigasyon algoritmaları ve C
+                                programlama dilinin derinlikleri (fonksiyon işaretçileri, durum makineleri, bitwise
+                                optimizasyonlar) üzerine teknik makaleler yazıyor ve açık kaynak projeler
+                                geliştiriyorum.
+                            </p>
                         </div>
                     </div>
                 </li>
                 <li class="timeline-inverted">
-                    <div class="timeline-image">
-                        <h4>
-                            <br> Yükleniyor...
+                    <div class="timeline-image" style="background-color: #212529; border-color: #ffc800;">
+                        <h4 class="text-warning" style="font-size: 0.95rem; margin-top: 1.5rem; line-height: 1.3;">
+                            <i class="fas fa-rocket fa-lg mb-2"></i><br>Gelecek
                         </h4>
                     </div>
                 </li>
             </ul>
         </div>
     </section>
-    <!-- Experiences-->
-    <section class="page-section bg-dark experience pb-4 " id="experiences">
-        <div class="container ">
-            <div class="text-center text-white">
-                <h2 class="section-heading text-uppercase">Deneyimler</h2>
-                <h3 class="section-subheading text-muted">...</h3>
+    <!-- Experiences Section -->
+    <section class="page-section experience" id="experiences">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-heading text-uppercase">İş &amp; Proje Deneyimleri</h2>
+                <p class="text-muted fs-5">Sektörel ve akademik çalışmalarda edindiğim mühendislik tecrübeleri</p>
             </div>
 
-            <div class="row text-center ">
-                <div class="col-md-4 mx-auto text-white">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-plane fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Elektronik Mühendisi</h4>
-                    <p class="text-muted bg-light bg-opacity-75">İdealab R&D</p>
-                </div>
-                <div class="col-md-4 mx-auto text-white">
-                    <span class="fa-stack fa-4x">
-                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="my-3">Elektronik Mühendisi</h4>
-                    <p class="text-muted bg-light bg-opacity-75">Hergele Teknoloji</p>
+            <div class="row g-4">
+                <!-- Deneyim 1: İdealab R&D -->
+                <div class="col-lg-6">
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-company">
+                                    <a href="https://www.idealab.com.tr" target="_blank" rel="noopener noreferrer">
+                                        İdealab R&amp;D <i class="fas fa-external-link-alt fs-6 text-warning ms-1"></i>
+                                    </a>
+                                </h3>
+                                <div class="exp-role">Elektronik Mühendisi</div>
+                            </div>
+                            <span class="exp-badge">Tam Zamanlı</span>
+                        </div>
+                        <div class="exp-meta">
+                            <span><i class="far fa-calendar-alt text-warning"></i> Ekim 2025 - Günümüz</span>
+                            <span><i class="fas fa-map-marker-alt text-warning"></i> Kocaeli / Gebze</span>
+                        </div>
+                        <div class="exp-body">
+                            <ul class="exp-list">
+                                <li>Ar-Ge odaklı projelerde gömülü sistem mimarileri, donanım tasarımı ve yazılım
+                                    geliştirme süreçlerini yürütmekteyim.</li>
+                                <li>Elektronik devre şematik ve PCB tasarımı, bileşen seçimi, test ve prototipleme
+                                    faaliyetlerini gerçekleştirmekteyim.</li>
+                                <li>Mikrodenetleyici tabanlı sistemlerde güvenilir ve düşük seviyeli yazılım çözümleri
+                                    üretmekteyim.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-tech-stack">
+                            <span class="exp-tech-badge">Embedded C</span>
+                            <span class="exp-tech-badge">STM32 / ARM</span>
+                            <span class="exp-tech-badge">PCB Design</span>
+                            <span class="exp-tech-badge">Donanım Test</span>
+                            <span class="exp-tech-badge">R&amp;D</span>
+                        </div>
+                    </div>
                 </div>
 
+                <!-- Deneyim 2: Hergele Mobility -->
+                <div class="col-lg-6">
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-company">
+                                    <a href="https://www.hergele.co" target="_blank" rel="noopener noreferrer">
+                                        Hergele Mobility <i class="fas fa-external-link-alt fs-6 text-warning ms-1"></i>
+                                    </a>
+                                </h3>
+                                <div class="exp-role">Elektronik &amp; Gömülü Sistemler Mühendisi</div>
+                            </div>
+                            <span class="exp-badge">Mühendislik</span>
+                        </div>
+                        <div class="exp-meta">
+                            <span><i class="far fa-calendar-alt text-warning"></i> 2024 - 2025</span>
+                            <span><i class="fas fa-map-marker-alt text-warning"></i> İstanbul</span>
+                        </div>
+                        <div class="exp-body">
+                            <ul class="exp-list">
+                                <li>Yük taşıma elektrikli araçları için ana kontrol kartlarının donanım ve yazılımını
+                                    uçtan uca tasarladım; üretilen kartlar sahada aktif araçlarda kullanıma alındı.</li>
+                                <li>Birimler arası haberleşme için UART, I2C ve SPI protokollerini yapılandırdım;
+                                    Bluetooth modülü ve LED/OLED kullanıcı arayüzleri geliştirdim.</li>
+                                <li>Depo aracının otonom dönüşümü projesine liderlik ederek tüm elektronik ve yazılım
+                                    prototipini başarıyla tamamladım.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-tech-stack">
+                            <span class="exp-tech-badge">STM32</span>
+                            <span class="exp-tech-badge">Embedded C</span>
+                            <span class="exp-tech-badge">KiCad</span>
+                            <span class="exp-tech-badge">UART / SPI / I2C</span>
+                            <span class="exp-tech-badge">OLED UI</span>
+                            <span class="exp-tech-badge">Otonom Sistemler</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deneyim 3: G-Türk İHA Takımı -->
+                <div class="col-lg-6">
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-company">
+                                    <a href="https://mhtkoc.github.io/gturkiha" target="_blank"
+                                        rel="noopener noreferrer">
+                                        G-Türk İHA Takımı <i
+                                            class="fas fa-external-link-alt fs-6 text-warning ms-1"></i>
+                                    </a>
+                                </h3>
+                                <div class="exp-role">Elektronik Sistemler Sorumlusu</div>
+                            </div>
+                            <span class="exp-badge">Takım Liderliği</span>
+                        </div>
+                        <div class="exp-meta">
+                            <span><i class="far fa-calendar-alt text-warning"></i> 2021 - 2024</span>
+                            <span><i class="fas fa-map-marker-alt text-warning"></i> GTÜ / Kocaeli</span>
+                        </div>
+                        <div class="exp-body">
+                            <ul class="exp-list">
+                                <li>5 kişilik mühendislik ekibinde insansız hava aracının güç dağıtımı, sensör
+                                    entegrasyonu ve telemetri elektroniğinden sorumlu oldum.</li>
+                                <li>Otopilot, GPS, alıcı-verici sistemleri ve motor sürücülerin donanımsal
+                                    entegrasyonunu ve saha testlerini yönettim.</li>
+                                <li>Takımın teknik raporlama, yarışma sunumları ve tanıtım web sitesi geliştirme
+                                    süreçlerini yürüttüm.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-tech-stack">
+                            <span class="exp-tech-badge">İHA Elektroniği</span>
+                            <span class="exp-tech-badge">Telemetri</span>
+                            <span class="exp-tech-badge">Güç Sistemleri</span>
+                            <span class="exp-tech-badge">Sensör Entegrasyonu</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deneyim 4: AR-GE Teknoloji ve İnovasyon Kulübü (ATİK) -->
+                <div class="col-lg-6">
+                    <div class="experience-card">
+                        <div class="exp-header">
+                            <div>
+                                <h3 class="exp-company">
+                                    <a href="https://mhtkoc.github.io/atik" target="_blank" rel="noopener noreferrer">
+                                        ATİK Kulübü <i class="fas fa-external-link-alt fs-6 text-warning ms-1"></i>
+                                    </a>
+                                </h3>
+                                <div class="exp-role">Kurucu Yönetim Kurulu &amp; Web Koordinatörü</div>
+                            </div>
+                            <span class="exp-badge">Organizasyon</span>
+                        </div>
+                        <div class="exp-meta">
+                            <span><i class="far fa-calendar-alt text-warning"></i> 2020 - 2022</span>
+                            <span><i class="fas fa-map-marker-alt text-warning"></i> GTÜ / Kocaeli</span>
+                        </div>
+                        <div class="exp-body">
+                            <ul class="exp-list">
+                                <li>Üniversite bünyesinde teknoloji ve inovasyon odaklı öğrenci kulübünün kuruluş
+                                    sürecine öncülük ettim.</li>
+                                <li>Kulübün resmi web sitesinin tasarım ve yazılım koordinatörlüğünü üstlendim.</li>
+                                <li>Teknik eğitimler, seminerler ve proje yarışmaları organizasyonlarında aktif yönetim
+                                    rolü üstlendim.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-tech-stack">
+                            <span class="exp-tech-badge">Web Geliştirme</span>
+                            <span class="exp-tech-badge">Proje Yönetimi</span>
+                            <span class="exp-tech-badge">Takım Çalışması</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <br><br><br><br>
     </section>
     <!-- Portfolio Grid-->
+    <!-- Portfolio Section -->
     <section class="page-section bg-light" id="portfolio">
         <div class="container">
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">Projeler</h2>
+            <div class="text-center mb-5">
+                <h2 class="section-heading text-uppercase">Projelerim</h2>
+                <p class="text-muted fs-5">Gömülü sistemler, robotik, yazılım ve otonom teknolojiler üzerine
+                    geliştirdiğim çalışmalar</p>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-sm-6 mx-auto">
-                    <!-- Portfolio item: Autonomous Mobile Robot -->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" href="#">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <div style="height: 18rem;">
-                                <img class="img-fluid img-fit" src="assets/img/portfolio/robot.webp"
-                                    alt="Autonomous Mobile Robot" />
-                            </div>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Autonomous Mobile Robot</div>
-                                <div class="portfolio-caption-subheading text-muted">2024 - Now</div>
-                                <div class="portfolio-caption-subheading text-muted" style="font-size: 0.95em;">
-                                    An autonomous indoor robot designed to carry payloads and perform obstacle
-                                    avoidance.<br>
-                                    <strong>Technologies:</strong> ROS2 Jazzy, Nav2, Slamtoolbox, YOLOv8, OpenCV, C++,
-                                    Python, Raspberry Pi 5, LiDAR, IMU, RGB Camera, Hailo 8L NPU.
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mx-auto">
-                    <!-- Portfolio item: Electronic Vehicle Controllers -->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" href="#">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <div style="height: 18rem;">
-                                <img class="img-fluid img-fit" src="assets/img/portfolio/controller.webp"
-                                    alt="Electronic Vehicle Controllers" />
-                            </div>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Electronic Vehicle Controllers</div>
-                                <div class="portfolio-caption-subheading text-muted">2024 - 2025</div>
-                                <div class="portfolio-caption-subheading text-muted" style="font-size: 0.95em;">
-                                    Designed and developed hardware/software interfaces for warehouse vehicle
-                                    controllers.<br>
-                                    <strong>Technologies:</strong> C, KiCad.
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row" style="padding-top: 5%;">
-                <div class="col-lg-4 col-sm-6 mx-auto">
-                    <!-- Portfolio item 3-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" href="https://github.com/mhtkoc/CalorieTracker">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <div style="height: 18rem;">
-                                <img class="img-fluid img-fit" src="assets/img/portfolio/linkedlist.png"
-                                    alt="Linked List" />
-                            </div>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Calorie Tracker</div>
-                                <div class="portfolio-caption-subheading text-muted">C++ Linked list</div>
-                            </div>
 
-
-                        </a>
-
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mx-auto">
-                    <!-- Portfolio item 4-->
-                    <div class="portfolio-item">
-
-                        <a class="portfolio-link" href="https://mhtkoc.github.io/atik">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            <div class="row g-4">
+                <!-- Proje 1: Autonomous Mobile Robot -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-img-container">
+                            <span class="project-category-badge">
+                                <i class="fas fa-robot"></i> Robotik &amp; Otonom
+                            </span>
+                            <img src="assets/img/portfolio/robot.webp" alt="Autonomous Mobile Robot" loading="lazy" />
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Autonomous Mobile Robot</h3>
+                            <div class="project-date">
+                                <i class="far fa-calendar-alt text-warning"></i> 2024 - 2025
                             </div>
-                            <div style="height: 18rem;">
-                                <img src="assets/img/portfolio/webtasarım.png" class="img-fluid img-fit"
-                                    alt="Web Tasarım" />
+                            <p class="project-desc">
+                                Raspberry Pi 5 ve Hailo-8L NPU üzerinde ROS2 Jazzy, Nav2 ve Slamtoolbox kullanılarak
+                                geliştirilmiş, LiDAR ve RGB kamera ile gerçek zamanlı engel sakınımı ve haritalama
+                                yapabilen otonom iç mekan taşıma robotu.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">ROS2 Jazzy</span>
+                                <span class="tech-badge">Nav2</span>
+                                <span class="tech-badge">Slamtoolbox</span>
+                                <span class="tech-badge">C++</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">YOLOv8</span>
+                                <span class="tech-badge">LiDAR</span>
+                                <span class="tech-badge">Hailo 8L</span>
                             </div>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Topluluk Web Sitesi</div>
-                                <div class="portfolio-caption-subheading text-muted">Frontend(html-css-js)</div>
+                            <div class="project-footer">
+                                <span class="badge bg-success px-3 py-2 fw-bold"><i
+                                        class="fas fa-check-circle me-1"></i>Tamamlandı</span>
                             </div>
-                        </a>
-
+                        </div>
                     </div>
                 </div>
 
-
-            </div>
-            <div class="row" style="padding-top: 5%;">
-                <div class="col-lg-4 col-sm-6 mx-auto">
-                    <!-- Portfolio item 5-->
-                    <div class="portfolio-item">
-                        <a class="portfolio-link" href="https://github.com/mhtkoc/Sentiment-Analysis">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                <!-- Proje 2: Electronic Vehicle Controllers -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-img-container">
+                            <span class="project-category-badge">
+                                <i class="fas fa-microchip"></i> Gömülü &amp; Donanım
+                            </span>
+                            <img src="assets/img/portfolio/controller.webp" alt="Electronic Vehicle Controllers"
+                                loading="lazy" />
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Electronic Vehicle Controllers</h3>
+                            <div class="project-date">
+                                <i class="far fa-calendar-alt text-warning"></i> 2024 - 2025
                             </div>
-                            <div style="height: 18rem;">
-                                <img class="img-fluid img-fit" src="assets/img/portfolio/makina-ogrenmesi.jpg"
-                                    alt="Linked List" />
+                            <p class="project-desc">
+                                Endüstriyel elektrikli depo araçları için STM32 tabanlı ana kontrol kartlarının donanım
+                                (KiCad) ve gömülü yazılım (C) tasarımı. UART, I2C ve SPI protokolleri ile OLED ekran ve
+                                Bluetooth haberleşmesi entegrasyonu.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">Embedded C</span>
+                                <span class="tech-badge">STM32</span>
+                                <span class="tech-badge">KiCad</span>
+                                <span class="tech-badge">UART / SPI / I2C</span>
+                                <span class="tech-badge">PCB Design</span>
                             </div>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Twitter Verileriyle Duygu Analizi</div>
-                                <div class="portfolio-caption-subheading text-muted">Makina öğrenmesi</div>
-
+                            <div class="project-footer">
+                                <span class="badge bg-success px-3 py-2 fw-bold"><i
+                                        class="fas fa-check-circle me-1"></i> Üretime Geçti</span>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 mx-auto">
-                    <!-- Portfolio item 6-->
-                    <div class="portfolio-item">
 
-                        <a class="portfolio-link" href="https://mhtkoc.github.io/gturkiha">
-                            <div class="portfolio-hover">
-                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                <!-- Proje 3: Calorie Tracker -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-img-container">
+                            <span class="project-category-badge">
+                                <i class="fas fa-code"></i> C++ &amp; Algoritma
+                            </span>
+                            <img src="assets/img/portfolio/linkedlist.png" alt="Calorie Tracker" loading="lazy" />
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Calorie Tracker</h3>
+                            <div class="project-date">
+                                <i class="far fa-calendar-alt text-warning"></i> 2024
                             </div>
-                            <div style="height: 18rem;">
-                                <img src="assets/img/portfolio/webtasarım.png" class="img-fluid img-fit"
-                                    alt="Web Tasarım" />
+                            <p class="project-desc">
+                                Dinamik bağlı liste (Linked List) veri yapısı kullanılarak C++ ile geliştirilmiş, besin
+                                ve kalori takibi yapmayı sağlayan nesne yönelimli ve bellek optimizasyonlu konsol
+                                uygulaması.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">C++</span>
+                                <span class="tech-badge">Linked List</span>
+                                <span class="tech-badge">Data Structures</span>
+                                <span class="tech-badge">OOP</span>
                             </div>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">İHA Takımı Web Sitesi</div>
-                                <div class="portfolio-caption-subheading text-muted">Frontend(html-css-js)</div>
+                            <div class="project-footer">
+                                <a href="https://github.com/mhtkoc/CalorieTracker" target="_blank"
+                                    rel="noopener noreferrer" class="btn btn-dark btn-sm">
+                                    <i class="fab fa-github"></i> GitHub Deposu
+                                </a>
                             </div>
-                        </a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Proje 4: Sentiment Analysis -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-img-container">
+                            <span class="project-category-badge">
+                                <i class="fas fa-brain"></i> Yapay Zeka &amp; NLP
+                            </span>
+                            <img src="assets/img/portfolio/makina-ogrenmesi.jpg" alt="Twitter Duygu Analizi"
+                                loading="lazy" />
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Twitter Duygu Analizi</h3>
+                            <div class="project-date">
+                                <i class="far fa-calendar-alt text-warning"></i> 2023
+                            </div>
+                            <p class="project-desc">
+                                Twitter verileri üzerinde Doğal Dil İşleme (NLP) ve makine öğrenmesi algoritmaları
+                                kullanılarak kullanıcı yorumlarının olumlu, olumsuz ve nötr olarak sınıflandırılması
+                                projesi.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">NLP</span>
+                                <span class="tech-badge">Scikit-Learn</span>
+                                <span class="tech-badge">Pandas</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://github.com/mhtkoc/Sentiment-Analysis" target="_blank"
+                                    rel="noopener noreferrer" class="btn btn-dark btn-sm">
+                                    <i class="fab fa-github"></i> GitHub Deposu
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proje 5: G-Türk İHA Takımı Web Sitesi -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-img-container">
+                            <span class="project-category-badge">
+                                <i class="fas fa-globe"></i> Web &amp; Arayüz
+                            </span>
+                            <img src="assets/img/portfolio/webtasarım.png" alt="İHA Takımı Web Sitesi" loading="lazy" />
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">G-Türk İHA Takımı Web Sitesi</h3>
+                            <div class="project-date">
+                                <i class="far fa-calendar-alt text-warning"></i> 2023
+                            </div>
+                            <p class="project-desc">
+                                Gebze Teknik Üniversitesi G-Türk İHA takımı için takım tanıtımı, teknik raporlar ve
+                                sponsorluk duyurularını içeren modern ve duyarlı web sitesi.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">Bootstrap</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://mhtkoc.github.io/gturkiha" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-warning text-dark fw-bold btn-sm">
+                                    <i class="fas fa-external-link-alt"></i> Canlı Siteyi Aç
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proje 6: ATİK Topluluk Web Sitesi -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <div class="project-img-container">
+                            <span class="project-category-badge">
+                                <i class="fas fa-users"></i> Web &amp; Topluluk
+                            </span>
+                            <img src="assets/img/portfolio/webtasarım.png" alt="Topluluk Web Sitesi" loading="lazy" />
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">ATİK Kulübü Web Sitesi</h3>
+                            <div class="project-date">
+                                <i class="far fa-calendar-alt text-warning"></i> 2023
+                            </div>
+                            <p class="project-desc">
+                                AR-GE Teknoloji ve İnovasyon Kulübü için etkinlik duyuruları, üye kayıtları ve blog
+                                içeriklerinin yönetildiği modern tanıtım platformu.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">UI/UX</span>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://mhtkoc.github.io/atik" target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-warning text-dark fw-bold btn-sm">
+                                    <i class="fas fa-external-link-alt"></i> Canlı Siteyi Aç
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <a class="nav-link" href="https://mhtkoc.github.io/mdbook-test/">mdbook-test</a>
 
     <!-- Footer-->
     <footer class="footer py-4" id="contact">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-4 text-lg-start">Copyright &copy; mhtkoc.github.io 2022</div>
+                <div class="col-lg-4 text-lg-start">Copyright &copy; mhtkoc.github.io 2025 - 2026</div>
                 <div class="col-lg-4 my-3 my-lg-0">
-                    <a class="btn btn-dark btn-social mx-2" href="https://instagram.com/muhametkoc4"
-                        aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                    <!-- <a class="btn btn-dark btn-social mx-2" href="https://instagram.com/muhametkoc4"
+                        aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a> -->
                     <a class="btn btn-dark btn-social mx-2" href="https://github.com/mhtkoc" aria-label="Github"><i
                             class="fab fa-github fa-2x"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/muhammet-koc/"
                         aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-2x"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/mhmmtkc_" aria-label="Twitter"><i
-                            class="fab fa-twitter fa-2x"></i></a>
+                    <!-- <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/mhmmtkc_" aria-label="Twitter"><i
+                            class="fab fa-twitter fa-2x"></i></a> -->
 
                 </div>
                 <div class="col-lg-4 text-lg-end">
