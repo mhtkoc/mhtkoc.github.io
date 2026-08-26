@@ -1,14 +1,38 @@
 [
   {
+    "file": "posts/2025-10-17-ilk-yazi.md",
+    "title": "İlk Blog Yazım",
+    "date": "2025-10-17",
+    "description": "Bu benim ilk markdown tabanlı blog yazım!"
+  },
+  {
     "file": "posts/2026-02-25-c-bitwise-operators.md",
     "title": "C Dilinde Bitwise (Bit Düzeyinde) Operatörler",
     "date": "2026-02-25",
     "description": "C programlama dilindeki bitwise operatörleri örneklerle açıklıyoruz."
   },
   {
-    "file": "posts/2025-10-17-ilk-yazi.md",
-    "title": "İlk Blog Yazım",
-    "date": "2025-10-17",
-    "description": "Bu benim ilk markdown tabanlı blog yazım!"
+    "file": "posts/sorting-triangles-by-area.md",
+    "title": "Sorting Triangles by Area in C",
+    "date": "2026-04-06",
+    "description": "C programlama dilinde üçgenlerin alanlarını hesaplayarak sıralayan bir algoritma."
+  },
+  {
+    "file": "posts/function_pointers_on_embedded.md",
+    "title": "Gömülü Yazılım Mimarilerinde C Programlama Dili Fonksiyon İşaretçileri: Tasarım Kalıpları, Sistem Riskleri ve Standart Uyumluluk Raporu",
+    "date": "2026-08-23",
+    "description": "Gömülü sistemlerde fonksiyon işaretçilerinin donanım soyutlama katmanları (HAL) oluşturulmasında nasıl kullanıldığı, yazılım mimarilerindeki dinamik davranışları, bellek yönetimi üzerindeki etkileri, statik analiz ve derleyici optimizasyonları açısından yarattığı zorluklar ile MISRA C ve AUTOSAR gibi endüstri standartları altındaki güvenli kodlama pratikleri detaylı bir şekilde incelenmektedir."
+  },
+  {
+    "file": "posts/function_pointers_general.md",
+    "title": "C Programlama Dilinde Fonksiyon İşaretçileri: Bellek Mimarisi, Sistem Entegrasyonu, Güvenlik Standartları ve Mikro-Mimari Analizi",
+    "date": "2026-08-22",
+    "description": "C programlama dilinde fonksiyon işaretçilerinin bellekteki konumu, sözdizimsel evrimi, standart kütüphanedeki (stdlib) algoritmik kullanımları, asenkron sinyal güvenliği (async-signal safety) açısından getirdiği kısıtlamalar, nesne yönelimli programlama (OOP) simülasyonlarındaki mimari rolleri, Linux çekirdeği (kernel) gibi devasa sistemlerdeki tarihsel entegrasyonu ve son olarak havacılık standartları (MISRA C, DO-178C) ile işlemci mikro-mimarisi (Spectre v2, Retpoline) ekseninde yarattığı güvenlik ve performans darboğazları derinlemesine analiz edilmektedir."
+  },
+  {
+    "file": "posts/embedded_fsm.md",
+    "title": "Gömülü Sistemlerde Durum Makineleri (Finite State Machines) ve Eş Zamanlılık Sorunları",
+    "date": "2026-08-26",
+    "description": "Gömülü sistemlerde durum makinelerinin tasarımı, uygulanması ve eş zamanlılık sorunlarının çözümleri."
   }
 ]
